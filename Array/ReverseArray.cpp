@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+void reverse(int arr[], int n){
+
+    int tempArr[n];
+
+    for(int i=0; i<n; i++){
+        tempArr[i] = arr[n-1-i];
+    }
+
+    for(int i=0; i<n; i++){
+        arr[i] = tempArr[i];
+    }
+
+    for(int i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+}
+
+int main(){
+
+    int arr[] = {1,2,3,4};
+    int n = sizeof(arr)/sizeof(int);
+
+    reverse(arr,n);
+
+    return 0;
+}
